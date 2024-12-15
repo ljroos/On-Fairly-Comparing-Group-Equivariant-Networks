@@ -2,7 +2,8 @@
 
 ![](moons_extracted_polytopes.png)
 
-Official repository for the paper *On Fairly Comparing Group Equivariant Convolutional Networks* (Roos and Kroon, 2024).
+Official repository for the paper *On Fairly Comparing Group Equivariant Convolutional Networks* [(Roos and Kroon, 2024)](https://openreview.net/forum?id=oUv5chwioZ) and the subsequent thesis, *On the Flexibility of Group-Equivariant Convolutional Neural Networks* (Roos, 2024).
 
-Code to follow soon---it is still being prepared to be camera ready.
-If you would like access to it earlier, feel free to email me, Lucas Roos, at roosluan@gmail.com.
+Early experimental code---I hope to neaten it up in time.
+
+2024 Stellenbosch University. All rights reserved.

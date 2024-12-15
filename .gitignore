@@ -1,0 +1,8 @@
+*raw-data/
+__pycache__
+*.pth
+*lightning_logs
+*checkpoints
+*wandb
+*.ignore*
+

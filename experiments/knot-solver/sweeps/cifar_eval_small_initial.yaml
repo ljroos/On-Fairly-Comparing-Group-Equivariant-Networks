@@ -1,0 +1,40 @@
+program: experiments/knot-solver/evaluate.py
+method: grid
+entity: ljroos-msc
+project: knot-solver
+name: "Cifar knot counting evaluation. Only using full training sweep and rot90flip values."
+metric:
+  name: test_loss
+  goal: minimize
+parameters:
+  dataset:
+    values: ["cifar10"]
+  num_train:
+    values: [50000]
+  group:
+    values: ["trivial", "flipH", "flipW", "rot90", "D4"]
+  aa_seed:
+    values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
+  cpu:
+    value: False
+  dropout:
+    values: [0.0]
+  batch_norm:
+    values: [True]
+  hidden_group_channels:
+    values: [16, 24, 32, 48, 64]
+  hidden_layers:
+    values: [6]  # 6 is the value used for CohenCNN
+  augment:
+    values: ["rot90flip"]
+  max_epochs:
+    value: -1
+  batch_size:
+    value: 128
+  log_results:
+    value: True
+command:
+  - ${env}
+  - ${interpreter}
+  - ${program}
+  - ${args_no_boolean_flags}

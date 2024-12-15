@@ -1,0 +1,1 @@
+Implementation of $D_4$-equivariant G-CNNs for linear layers and convolutional layers.

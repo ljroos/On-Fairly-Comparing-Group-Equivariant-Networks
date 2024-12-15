@@ -1,0 +1,42 @@
+program: experiments/knot-solver/train.py
+method: grid
+entity: ljroos-msc
+project: knot-solver
+name: "Base Downsampled MNIST sweep."
+metric:
+  name: test_loss
+  goal: minimize
+parameters:
+  dataset:
+    values: ["downsampled_mnist"]
+  num_train:
+    values: [10000, 60000]
+  group:
+    values: ["trivial", "translateH", "translateH_and_or_W"]
+  aa_seed:
+    values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
+  save_model:
+    value: True
+  cpu:
+    value: False
+  dropout:
+    values: [0.0]
+  batch_norm:
+    values: [True]
+  hidden_group_channels:
+    values: [49, 147, 343, 931]
+  hidden_layers:
+    values: [4]
+  augment:
+    values: ["trivial", "translateH_and_or_W"]
+  max_epochs:
+    value: -1
+  batch_size:
+    value: 128
+  log_results:
+    value: True
+command:
+  - ${env}
+  - ${interpreter}
+  - ${program}
+  - ${args_no_boolean_flags}

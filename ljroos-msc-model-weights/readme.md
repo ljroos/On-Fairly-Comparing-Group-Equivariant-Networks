@@ -1,0 +1,1 @@
+Folder for storing weights of experiments so that polytopal complexes can later be extracted and further analysis can be performed.
