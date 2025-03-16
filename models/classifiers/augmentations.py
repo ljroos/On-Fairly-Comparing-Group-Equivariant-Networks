@@ -23,7 +23,7 @@ class O2ImageAugment(nn.Module):
         self.use_cnts_rot = augment in ["rot", "rotflip"]
         self.use_rot90 = augment in ["rot90", "rot90flip"]
 
-        self.use_vert_flip = augment in ["rotflip", "flipH"]
+        self.use_vert_flip = augment in ["rotflip", "rot90flip", "flipH"]
         self.use_horiz_flip = augment in ["flipW"]
 
         # note, flipH is flipping the horizontal axis, not flipping ABOUT the horizontal axis
